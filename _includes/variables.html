@@ -1,0 +1,5 @@
+{% assign dictionary = site.data.pt %}
+{% assign navigation = site.data.navigation %}
+
+{% assign webinars = (site.webinars | sort: 'date') | reverse %}
+{% assign latest = webinars.first %}

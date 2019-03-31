@@ -1,0 +1,16 @@
+title: Webinars
+brand: /assets/logo.png
+
+header:
+  - title: Home
+    url : /
+    target: _self
+
+  - title: Séries
+    url : /series
+    target: _self
+
+footer:
+  - title: Blog
+    url : https://blog.mrbraz.tech
+    target: _blank

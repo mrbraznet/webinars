@@ -1,0 +1,5 @@
+{% include variables.html %}
+
+{% assign numberOfMonth = include.date | date: "%-m" | minus: 1 %}
+{% assign month = dictionary.months[numberOfMonth] %}
+{{ latest.date | date: "%-d" }} de {{ month }} de {{ latest.date | date: "%Y" }} às {{ latest.date | date: "%R" }} {{ dictionary.timezone }}
