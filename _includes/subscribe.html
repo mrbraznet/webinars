@@ -1,0 +1,40 @@
+<form action="{{site.mailchimp}}" 
+    id="mc-subscribe-form" 
+    name="mc-subscribe-form">
+    
+    <input type="hidden" name="b_53fdeff1bbaa9a91b2486aa86_1191e5f872" tabindex="-1" value="">
+    <div class="input-group mb-3">
+        <input type="email" class="form-control" name="EMAIL" id="mce-EMAIL" placeholder="Seu melhor E-mail" aria-required="true">
+        <div class="input-group-append">
+            <button type="submit" class="btn btn-primary">Quero participar!</button>
+        </div>
+    </div>
+</form>
+<small>Ao se inscrever na lista, além de ser avisado sobre os eventos, você terá acesso ao meu e-book 100% gratuito contendo as 5 Melhores Dicas Para Implementar Microservices Na Sua Aplicação Hoje!</small>
+<div id="mce-response">
+    <div id="mce-success-response" class="alert alert-success" role="alert" style="display:none"></div>
+
+    <div id="mce-error-response" class="alert alert-danger" role="alert" style="display:none"></div>
+</div>
+
+<script>
+    function subscriptionCallback(response) {
+        var success = $('#mce-success-response');
+        var error = $('#mce-error-response');
+        var responseMsg = response.msg.replace("0 - Please enter a value", "Please fill out a valid e-mail");
+
+        if (response.result === 'success') {
+            success.show().html(responseMsg);
+            error.hide();
+        }
+
+        if (response.result === 'error') {
+            error.show().html(responseMsg);
+            success.hide();
+        }
+    }
+
+    $('#mc-subscribe-form').ajaxChimp({
+        callback : subscriptionCallback
+    });
+</script>

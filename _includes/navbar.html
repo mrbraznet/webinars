@@ -9,12 +9,12 @@
       </div>
       <div class="col-sm">
         <nav class="nav nav-masthead justify-content-center">
-            {% include live_alert.html %}
-          
           {% for item in navigation.header %}
           <a class="nav-link {% if item.url == page.url %}active{% endif %}" href="{{ item.url }}"
-            target="{{ item.target }}">{{ item.title }}</a>
+          target="{{ item.target }}">{{ item.title }}</a>
           {% endfor %}
+          
+          {% include live_alert.html %}
         </nav>
       </div>
     </div>

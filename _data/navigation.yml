@@ -7,7 +7,7 @@ header:
     target: _self
 
   - title: Séries
-    url : /series
+    url : /series.html
     target: _self
 
 footer:

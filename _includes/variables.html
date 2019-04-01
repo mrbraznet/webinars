@@ -1,5 +1,8 @@
 {% assign dictionary = site.data.pt %}
 {% assign navigation = site.data.navigation %}
+{% assign webinars = site.webinars | sort="when" %}
+{% assign channel = site.youtube.channel %}
+{% assign series = site.series %}
 
-{% assign webinars = (site.webinars | sort: 'date') | reverse %}
-{% assign latest = webinars.first %}
+{% assign latest = webinars | first %}
+{% assign latestSeries = series | where: "code", latest.series | first %}

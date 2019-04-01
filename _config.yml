@@ -2,8 +2,9 @@ title:             Mr. Braz Eventos Online
 email:             anderson.braz@gmail.com
 description:       
 author:            Mr. Braz
-baseurl:           "/"
-url:               "http://blackrockdigital.github.io"
+
+disqus: mrbraztech
+mailchimp: //github.us13.list-manage.com/subscribe/post?u=53fdeff1bbaa9a91b2486aa86&amp;id=1191e5f872
 
 # Social Profiles
 twitter_username:  mrbraztech
@@ -18,6 +19,11 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
 
+youtube:
+  channel: https://www.youtube.com/channel/UCwDRn3u-guxI8Lweh1ZpwmQ
+
 collections:
   webinars:
+    output: true
+  series:
     output: true

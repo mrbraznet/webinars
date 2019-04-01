@@ -1,0 +1,34 @@
+---
+layout: light
+---
+
+{% include variables.html %}
+
+<style>
+.cover-container {
+  background-image: url('/img/series.jpg');
+}
+</style>
+
+{% for serie in series%}
+<p class="h1 text-center">{{serie.title}}</p>
+<div class="row align-items-center">
+    {% assign serieWebinars = webinars | where:"series", serie.code %}
+    {% for webinar in serieWebinars reversed%}
+    <div class="col-sm text-center">
+        <img class="img-fluid" src="/img/webinars/{{webinar.hero}}">
+    </div>
+    <div class="col-sm ">
+        <p class="lead">
+            <strong>Episódio #{{ webinar.episode }}</strong>
+        </p>
+        <p>{{ webinar.title }}</p>
+        {% if webinar.recorded %}
+        <a href="{{webinar.url}}" class="btn btn-primary">Assistir</a>
+        {% else %}
+        <a href="/" class="btn btn-success">Quero Participar!</a>
+        {% endif %}
+    </div>
+    {% endfor%}
+</div>
+{%endfor%}
