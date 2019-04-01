@@ -11,6 +11,6 @@ header:
     target: _self
 
 footer:
-  - title: Blog
-    url : https://blog.mrbraz.tech
+  - title: Site
+    url : https://mrbraz.tech
     target: _blank
